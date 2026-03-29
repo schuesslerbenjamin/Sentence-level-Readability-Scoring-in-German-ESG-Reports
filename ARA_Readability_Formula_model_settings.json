@@ -1,0 +1,11 @@
+{
+  "train_data": "data/preprocessed_annotation_train.jsonl",
+  "dev_data": "data/preprocessed_annotation_dev.jsonl",
+  "eval_data": "data/preprocessed_annotation_eval.jsonl",
+  "features": ["text", "flesch_reading_ease", "1_wiener_sachtextformel", "polysyllable_proportion", "hkps", "lix"],
+  "target": "label",
+  "do_scale": false,
+  "model_type": "XGBOOST",
+
+  "model_path": "models/ARA_readability_formula_model/readability_formula_model"
+}

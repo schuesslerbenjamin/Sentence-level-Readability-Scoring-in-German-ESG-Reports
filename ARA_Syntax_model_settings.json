@@ -1,0 +1,18 @@
+{
+  "train_data": "data/preprocessed_annotation_train.jsonl",
+  "dev_data": "data/preprocessed_annotation_dev.jsonl",
+  "eval_data": "data/preprocessed_annotation_eval.jsonl",
+
+
+  "columns_to_keep": ["text"],
+  "target": "label",
+
+  "spacy_model": "de_dep_news_trf",
+  "banned_pos_tags": ["$(","$,","$.", "XY", "X", "PUNCT"], 
+  "model_path": "models/ARA_Syntax_model/Syntax_model.json",
+  "n_list": [2, 3],
+  "batch_sizes": [20],
+  "num_epochs": [40],
+  "learning_rates": [0.01],
+  "early_stopping_patiences": [15]
+}

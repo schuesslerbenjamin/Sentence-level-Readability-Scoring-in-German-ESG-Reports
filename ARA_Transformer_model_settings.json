@@ -1,0 +1,17 @@
+{
+  "train_data": "data/preprocessed_annotation_train.jsonl",
+  "dev_data": "data/preprocessed_annotation_dev.jsonl",
+  "eval_data": "data/preprocessed_annotation_eval.jsonl",
+
+  "columns_to_keep": ["text"],
+  "target": "label",
+
+  "model_checkpoint": "FacebookAI/xlm-roberta-base",
+  "batch_sizes": [20],
+  "num_epochs": [30],
+  "learning_rates": [0.0001],
+  "weight_decays": [0.001],
+  "checkpoint_dir": "checkpoints/ARA_Transformer_model",
+  "layers_to_disable_gradient": ["roberta.encoder.layer.0.", "roberta.encoder.layer.1.", "roberta.encoder.layer.2.", "roberta.encoder.layer.3.", "roberta.encoder.layer.4."],
+  "ARA_model_path": "models/ARA_Transformer_model/Transformer_model"
+}

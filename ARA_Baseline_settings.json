@@ -1,0 +1,7 @@
+{
+  "train_data": "data/preprocessed_annotation_train.jsonl",
+  "dev_data": "data/preprocessed_annotation_dev.jsonl",
+  "eval_data": "data/preprocessed_annotation_eval.jsonl",
+
+  "model_path": "models/ARA_Baseline/ARA_Baseline"
+}

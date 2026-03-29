@@ -1,0 +1,13 @@
+{
+  "train_data": "data/preprocessed_annotation_train.jsonl",
+  "dev_data": "data/preprocessed_annotation_dev.jsonl",
+  "eval_data": "data/preprocessed_annotation_eval.jsonl",
+  "columns_to_keep": ["text"],
+  "target": "label",
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "system_message": "You are a helpful assistant that rates the readability of German sentences.",
+  "user_message": "I will give you a sentence and I want you to rate it's readability. If the sentence has a low readability, choose 1. If the sentence has a low to medium readability, choose 2. If the sentence has a medium to high readability, choose 3. If the sentence has a high readability, choose 4. Please only answer with a single digit corresponding to the readability level. ",
+  "x_shot": 1,
+  "ARA_model_path": "models/ARA_LLM_model/LLM_model",
+  "quantize": "None"
+}
