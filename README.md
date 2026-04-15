@@ -1,12 +1,12 @@
-# Analyzing and Improving Readability in German Environmental, Social, and Governance Reporting
+# Sentence-level Readability Scoring in German ESG Reports
 
-by Benjamin Josef Schüßler
+by Benjamin Josef Schüßler and Jakob Prange
 
 ## Getting Started
 
 Make sure you have conda installed. Also make sure to add your huggingface token ([available here](https://huggingface.co/settings/tokens)) in the [local.env](local.env) file.
 
-You need access to the following models on huggingface (You need to get permisison for the models from the repositories with *):
+You need access to the following models on huggingface (You need to get permission for the models from the repositories with *):
 * https://huggingface.co/FacebookAI/xlm-roberta-base
 * https://huggingface.co/FacebookAI/xlm-roberta-large
 * https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct *
@@ -17,28 +17,6 @@ You need access to the following models on huggingface (You need to get permisis
 * https://huggingface.co/DEplain/trimmed_mbart_sents_apa_web
 
 
-
-
-Also install the EASSE-DE repository as follows:
-
-```
-git clone https://github.com/rstodden/easse-de.git
-cd easse-de
-conda create --name easse-de python=3.12
-conda activate easse-de
-pip install -e .
-pip install spacy_udpipe
-pip install ipykernel
-
-python -m spacy download de_dep_news_trf
-```
-In the file easse/sari.py, comment in the lines 253 - 256 and add:
-```
-sys_sents = [utils_prep.normalize(sent, lowercase, tokenizer, tokenizer_obj=tokenizer_obj) for sent in sys_sents]
-refs_sents = [[utils_prep.normalize(sent, lowercase, tokenizer, tokenizer_obj=tokenizer_obj) for sent in ref_sents] for ref_sents in refs_sents]
-```
-on the same level as the line 256.
-This was probably an oversight from the developers that adapted EASSE to German. This follows the original implementation of EASSE available [here](https://github.com/feralvam/easse/blob/master/easse/sari.py).
 
 ### Setting up the Environments for the Individual Models
 
